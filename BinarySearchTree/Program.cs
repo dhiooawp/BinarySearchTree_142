@@ -36,6 +36,19 @@ namespace BinarySearchTree
                 Console.WriteLine("Duplicate words not allowed");
                 return;
             }
+            else
+            {
+                tmp = nwe node(element, null, null);
+                if (parent == null)
+                {
+                    ROOT = tmp;
+                }
+                else if (string.Compare(element,parent.info) <0)
+                {
+                    if (string.Compare(element, parent.info) < 0)
+                        parent.lchild = tmp;
+                }
+            }
         }
         static void Main(string[] args)
         {
