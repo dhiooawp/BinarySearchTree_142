@@ -67,7 +67,14 @@ namespace BinarySearchTree
                     currentnode = currentnode.rchild;
             }
         }
-        public 
+        public void inorder(node ptr)
+        {
+          
+        }
+        public void preorder(node ptr)
+        {
+           
+        }
         static void Main(string[] args)
         {
         }
