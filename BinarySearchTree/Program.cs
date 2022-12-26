@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace BinarySearchTree
 {
@@ -20,10 +21,10 @@ namespace BinarySearchTree
             rchild = r;
         }
     }
-    class BinarySeacrhTree
+    class BinaryTree
     {
         public node ROOT;
-        public BinarySeacrhTree()
+        public BinaryTree()
         {
             ROOT = null;
         }
@@ -77,7 +78,7 @@ namespace BinarySearchTree
             if (ptr != null)
             {
                 inorder(ptr.lchild);
-                Console.WriteLine(ptr.info + "");
+                Console.WriteLine(ptr.info + " ");
                 inorder(ptr.rchild);
             }
         }
@@ -90,7 +91,7 @@ namespace BinarySearchTree
             }
             if (ptr != null)
             {
-                Console.WriteLine(ptr.info + "");
+                Console.WriteLine(ptr.info + " ");
                 preorder(ptr.lchild);
                 preorder(ptr.rchild);
             }
@@ -98,9 +99,19 @@ namespace BinarySearchTree
         public void postorder(node ptr)
         {
             if (ROOT == null)
+            {
+                Console.WriteLine("Tree is empty");
+                return;
+            }
+            if (ptr != null)
+            {
+                postorder(ptr.lchild);
+                postorder(ptr.rchild);
+            }
         }
         static void Main(string[] args)
         {
+            
         }
     }
 }
